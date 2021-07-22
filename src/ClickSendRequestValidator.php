@@ -1,10 +1,10 @@
 <?php
 
+namespace Codemonkey76\ClickSend;
+
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-
-namespace Codemonkey76\ClickSend;
 
 class ClickSendRequestValidator
 {
