@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "ClicksendServiceProvider"
+              "ClickSendServiceProvider"
             ]
         }
     }
