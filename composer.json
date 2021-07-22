@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Codemonkey76\\Clicksend\\": "src"
+            "Codemonkey76\\ClickSend\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Codemonkey76\\Clicksend\\Tests\\": "tests"
+            "Codemonkey76\\ClickSend\\Tests\\": "tests"
         }
     },
     "scripts": {
