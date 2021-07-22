@@ -2,6 +2,7 @@
 
 All notable changes to `laravel-clicksend` will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## 0.0.1 - 2021-07-22
 
 - initial release
+- contains basic boilerplate
