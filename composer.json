@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "ClickSendServiceProvider"
+              "Codemonkey76\\ClickSend\\ClickSendServiceProvider"
             ]
         }
     }

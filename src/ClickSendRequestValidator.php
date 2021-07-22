@@ -15,7 +15,7 @@ class ClickSendRequestValidator
         if ($isValid) {
             return $next($request);
         } else {
-            return new Response('You are not Clicksend :(', 403);
+            return new Response('You are not ClickSend :(', 403);
         }
     }
 }
