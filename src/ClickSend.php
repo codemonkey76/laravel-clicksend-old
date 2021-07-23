@@ -44,19 +44,33 @@ class ClickSend
         return $this;
     }
 
-    public function message(string $message): bool
+    public function message(string $message): self
     {
         $this->sms_message->setBody($message);
 
+        return $this;
+    }
+
+    public function send(): bool
+    {
         try {
             $result = $this->apiInstance->smsSendPost(new SmsMessageCollection(['message' => [$this->sms_message]]));
             info($result);
-
         } catch (ApiException $ex) {
             info($ex->getMessage());
 
             return false;
         }
         return true;
+    }
+
+    public function getApiInstance(): SMSApi
+    {
+        return $this->apiInstance;
+    }
+
+    public function getSms(): SmsMessage
+    {
+        return $this->sms_message;
     }
 }
