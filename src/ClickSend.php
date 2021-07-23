@@ -54,7 +54,7 @@ class ClickSend
     public function send(): bool
     {
         try {
-            $result = $this->apiInstance->smsSendPost(new SmsMessageCollection(['message' => [$this->sms_message]]));
+            $result = $this->apiInstance->smsSendPost(new SmsMessageCollection(['messages' => [$this->sms_message]]));
             info($result);
         } catch (ApiException $ex) {
             info($ex->getMessage());
