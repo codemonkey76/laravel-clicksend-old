@@ -13,6 +13,7 @@ class ClickSend
 {
     protected SMSApi $apiInstance;
     protected SmsMessage $sms_message;
+    protected string $result;
 
     public static function make(): self
     {
@@ -54,14 +55,23 @@ class ClickSend
     public function send(): bool
     {
         try {
-            $result = $this->apiInstance->smsSendPost(new SmsMessageCollection(['messages' => [$this->sms_message]]));
-            info($result);
+            $this->result = $this->apiInstance->smsSendPost(new SmsMessageCollection(['messages' => [$this->sms_message]]));
+
         } catch (ApiException $ex) {
             info($ex->getMessage());
 
             return false;
         }
         return true;
+    }
+    public function getReceipt(string $messageId)
+    {
+        return $this->apiInstance->smsReceiptsByMessageIdGet($messageId);
+    }
+
+    public function getLastResult()
+    {
+        return $this->result;
     }
 
     public function getApiInstance(): SMSApi
